@@ -23,9 +23,9 @@
 <body class="antialiased">
 <h1>這是預備修改遊戲的 view </h1>
 
-公司名稱:{{$game_company}}<br/>
-製作人:{{$game_producer}}<br/>
-員工:{{$game_staff}}<br/>
+公司名稱:{{ $g_company }}<br/>
+製作人:{{ $g_producer  }}<br/>
+
 
 <a href="games">修改遊戲名稱</a>
 </body>

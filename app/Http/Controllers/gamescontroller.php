@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\games;
 use Illuminate\Http\Request;
 
 class gamescontroller extends Controller
@@ -21,6 +22,14 @@ class gamescontroller extends Controller
     public function edit($id)
 
     {
+        $gema = games::find($id);
+        if ($gema == null)
+            return "No record";
+
+        $games = $gema->toArray();
+        return view('games.edit', $games);
+
+        /*
         $data = [];
         if($id == 5)
         {
@@ -36,12 +45,18 @@ class gamescontroller extends Controller
         }
         //$data=compact(varname: 'game_company' , 'game_producer' , 'game_staff');
         return view('games.edit',$data);
+        */
+
 
     }
 
     public function show($id)
 
     {
+
+        $games = games::find($id)->toArray();
+
+        /*
         if($id == 5)
         {
             $game_company="Riot";
@@ -55,5 +70,9 @@ class gamescontroller extends Controller
             $game_staff="Whatever";
         }
         return view('games.show')->with([ 'company'=>$game_company,'producer'=>$game_producer,'staff'=>$game_staff ]);
+        */
+        return view('games.index',$games);
+
     }
+
 }

@@ -25,7 +25,6 @@
 
 公司名稱:{{$company}}<br/>
 製作人:{{$producer}}<br/>
-員工:{{$staff}}<br/>
 
 <a href="game">顯示遊戲</a>
 </body>

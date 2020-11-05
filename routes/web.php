@@ -13,6 +13,11 @@ use App\Http\Controllers\companyscontroller;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/',function (){
+    return view('welcome');
+});
+
 Route::get('games',[gamescontroller::class, 'index']);
 
 //檢視所有公司資料
