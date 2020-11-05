@@ -22,7 +22,7 @@
 </head>
 <body class="antialiased">
 <h1>這是預備修改遊戲的 view </h1>
-
+遊戲:{{$g_name}}
 公司名稱:{{ $g_company }}<br/>
 製作人:{{ $g_producer  }}<br/>
 

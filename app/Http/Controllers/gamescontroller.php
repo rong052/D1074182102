@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\games;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class gamescontroller extends Controller
@@ -16,18 +17,28 @@ class gamescontroller extends Controller
     public function create()
 
     {
-        return view('games.create');
+        $games=games::create(['g_name'=>'masterhunter','g_producer'=>'Ryozo','g_company'=>'12','created_at'=>Carbon::now(),'updated_at'=>Carbon::now()]);
+
+        return view('games.create',$games->toArray());
     }
 
     public function edit($id)
 
     {
-        $gema = games::find($id);
+        $games=games::findOrFail($id);
+        $games->update(['g_name'=>'League of Legends']);
+        $games->save();
+        $games->toArray();
+
+        return view('games.edit', $games);
+
+
+        /*$gema = games::find($id);
         if ($gema == null)
             return "No record";
 
         $games = $gema->toArray();
-        return view('games.edit', $games);
+        return view('games.edit', $games);*/
 
         /*
         $data = [];
