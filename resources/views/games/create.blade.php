@@ -22,12 +22,11 @@
 </head>
 <body class="antialiased">
 <h1>這是預備新增遊戲的 view </h1>
-<a href="games">新增遊戲</a>
 
 遊戲:{{$g_name}}
 製作人:{{$g_producer}}
 公司:{{$g_company}}
 
-<a href="<?php echo route('games.index'); ?>">修改遊戲名稱</a>
+<a href="<?php echo route('games.index'); ?>">新增遊戲</a>
 </body>
 </html>

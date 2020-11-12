@@ -21,17 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c2b54ee3-1725-4d6d-bd9c-aa3ebb8b249e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/companyscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Companyscontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/gamescontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Gamescontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/companys.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Company.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/games.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Game.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/CompanysTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/CompanysTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/companys/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companys/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/companys/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companys/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/companys/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companys/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/games/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/games/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/games/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/games/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +208,7 @@
       <workItem from="1603958389716" duration="133000" />
       <workItem from="1605144217165" duration="6768000" />
       <workItem from="1605151275771" duration="463000" />
-      <workItem from="1605151783037" duration="7183000" />
+      <workItem from="1605151783037" duration="7316000" />
     </task>
     <servers />
   </component>
