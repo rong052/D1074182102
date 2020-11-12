@@ -9,6 +9,7 @@ class companyscontroller extends Controller
     public function index()
 
     {
+
         return view('companys.index');
 
     }

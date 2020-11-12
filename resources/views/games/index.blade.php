@@ -22,6 +22,23 @@
 </head>
 <body class="antialiased">
 <h1>這是預備顯示[所有]遊戲的 view </h1>
-<a href="games">檢視遊戲</a>
+<table>
+<tr>
+    <th>遊戲作品</th>
+    <th>製作人</th>
+    <th>製作公司</th>
+    <th>建立時間</th>
+    <th>編輯時間</th>
+</tr>
+@foreach($games as $game)
+    <tr>
+        <td>{{$game->g_name}}</td>
+        <td>{{$game->g_producer}}</td>
+        <td>{{$game->g_company}}</td>
+        <td>{{$game->created_at}}</td>
+        <td>{{$game->updated_at}}</td>
+    </tr>
+@endforeach()
+</table>
 </body>
 </html>

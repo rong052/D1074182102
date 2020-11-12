@@ -16,16 +16,27 @@ class GamesTableSeeder extends Seeder
 
     public function generateRandomString($Length = 10)
     {
-        $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charactersLength = strlen($characters);
-        $randomstring = '';
-        for ($i = 0; $i < 10; $i++) {
-            $randomstring .= $characters[rand(0, $charactersLength - 1)];
+        /*$characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';*/
 
-            return $randomstring;
-        }
+        $characters = ['俠盜列車手',
+            '俠盜列車手II',
+            '俠盜列車手III',
+            '俠盜列車手IV',
+            '俠盜列車手V',
+            '碧血狂殺',
+            '碧血狂殺2',
+            '湯姆克蘭西：全境封鎖',
+            '湯姆克蘭西：全境封鎖2',
+            '虹彩六號：圍攻行動',
+            '看門狗',
+            '看門狗2',
+            '刺客教條',
+            '刺客教條II',
+            '刺客教條III',
+            '刺客教條IV:黑旗',
+            '刺客教條:大革命'];
 
-
+        return $characters[rand(0, count($characters) - 1)];
     }
 
     public function generateRandomGame()
