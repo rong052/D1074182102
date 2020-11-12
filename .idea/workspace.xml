@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2b54ee3-1725-4d6d-bd9c-aa3ebb8b249e" name="Default Changelist" comment="" />
+    <list default="true" id="c2b54ee3-1725-4d6d-bd9c-aa3ebb8b249e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -205,7 +207,7 @@
       <workItem from="1603958389716" duration="133000" />
       <workItem from="1605144217165" duration="6768000" />
       <workItem from="1605151275771" duration="463000" />
-      <workItem from="1605151783037" duration="7386000" />
+      <workItem from="1605151783037" duration="8523000" />
     </task>
     <servers />
   </component>
@@ -237,6 +239,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605157281915" />
+    <state x="123" y="57" width="1444" height="840" key="dock-window-1" timestamp="1605160091443">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="123" y="57" width="1444" height="840" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1605160091443" />
     <state x="674" y="290" key="refactoring.ChangeSignatureDialog" timestamp="1605155015967">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
