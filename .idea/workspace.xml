@@ -21,10 +21,17 @@
   <component name="ChangeListManager">
     <list default="true" id="c2b54ee3-1725-4d6d-bd9c-aa3ebb8b249e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/companyscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/companyscontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/gamescontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/gamescontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/GamesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/GamesTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/games/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/games/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/companyscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Companyscontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/gamescontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Gamescontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/companys.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Company.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/games.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/CompanysTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/CompanysTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/companys/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companys/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/companys/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companys/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/companys/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companys/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/games/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/games/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/games/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/games/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +175,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/game" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -176,6 +183,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -208,7 +216,9 @@
       <workItem from="1603940870862" duration="3000" />
       <workItem from="1603940887596" duration="8034000" />
       <workItem from="1603958389716" duration="133000" />
-      <workItem from="1605144217165" duration="6691000" />
+      <workItem from="1605144217165" duration="6768000" />
+      <workItem from="1605151275771" duration="463000" />
+      <workItem from="1605151783037" duration="7183000" />
     </task>
     <servers />
   </component>
@@ -228,13 +238,21 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604570104663">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605155082027">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604570104663" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605155082027" />
     <state x="777" y="443" key="NewPhpFileDialog" timestamp="1603336606118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603336606118" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1605157281915">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605157281915" />
+    <state x="674" y="290" key="refactoring.ChangeSignatureDialog" timestamp="1605155015967">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="674" y="290" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605155015967" />
   </component>
 </project>

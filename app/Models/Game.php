@@ -5,14 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class companys extends Model
+class Game extends Model
 {
     use HasFactory;
     protected  $fillable=[
 
-        'cp_name',
-        'country',
+        'g_name',
+        'g_producer',
+        'g_company',
         'created_at',
         'updated_at'
-        ];
+
+
+
+
+    ];
 }

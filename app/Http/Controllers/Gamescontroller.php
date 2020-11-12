@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\games;
+use App\Models\Game;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-class gamescontroller extends Controller
+class Gamescontroller extends Controller
 {
    public function index()
 
    {
-       $games = games::all();
+       $games = Game::all();
 
        return view('games.index',['games'=>$games]);
    }
@@ -19,7 +19,7 @@ class gamescontroller extends Controller
     public function create()
 
     {
-        $games=games::create(['g_name'=>'masterhunter','g_producer'=>'Ryozo','g_company'=>'12','created_at'=>Carbon::now(),'updated_at'=>Carbon::now()]);
+        $games=Game::create(['g_name'=>'masterhunter','g_producer'=>'Ryozo','g_company'=>'12','created_at'=>Carbon::now(),'updated_at'=>Carbon::now()]);
 
         return view('games.create',$games->toArray());
     }
@@ -27,7 +27,7 @@ class gamescontroller extends Controller
     public function edit($id)
 
     {
-        $games=games::findOrFail($id);
+        $games=Game::findOrFail($id);
         $games->update(['g_name'=>'League of Legends']);
         $games->save();
         $games->toArray();
@@ -67,7 +67,7 @@ class gamescontroller extends Controller
 
     {
 
-        $games = games::find($id)->toArray();
+        $games = Game::findOrFail($id)->toArray();
 
         /*
         if($id == 5)

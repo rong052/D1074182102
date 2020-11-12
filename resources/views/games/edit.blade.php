@@ -27,6 +27,6 @@
 製作人:{{ $g_producer  }}<br/>
 
 
-<a href="games">修改遊戲名稱</a>
+<a href="<?php echo route('games.index'); ?>">修改遊戲名稱</a>
 </body>
 </html>

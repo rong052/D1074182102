@@ -22,6 +22,21 @@
 </head>
 <body class="antialiased">
 <h1>這是預備顯示[所有]公司的 view </h1>
-<a href="companys">檢視公司</a>
+<table>
+    <tr>
+        <th>製作公司或工作室</th>
+        <th>國家</th>
+        <th>建立時間</th>
+        <th>編輯時間</th>
+    </tr>
+    @foreach($companys as $company)
+        <tr>
+            <td>{{$company->cp_name}}</td>
+            <td>{{$company->country}}</td>
+            <td>{{$company->created_at}}</td>
+            <td>{{$company->updated_at}}</td>
+        </tr>
+    @endforeach()
+</table>
 </body>
 </html>

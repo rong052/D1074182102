@@ -23,5 +23,7 @@
 <body class="antialiased">
 <h1>這是預備新增公司的 view </h1>
 <a href="companys">新增公司</a>
+製作公司或工作室:{{$cp_name}}
+國家 :{{$country}}
 </body>
 </html>

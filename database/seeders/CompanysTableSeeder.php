@@ -15,15 +15,19 @@ class CompanysTableSeeder extends Seeder
      */
     public function generateRandomString($Length = 10)
     {
-        $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charactersLength = strlen($characters);
-        $randomstring = '';
-        for ($i = 0; $i < 10; $i++) {
-            $randomstring .= $characters[rand(0, $charactersLength - 1)];
+        $characters = [
+            'Rockstar Games',
+            'Ubisoft (育碧)',
+            '光榮特庫摩控股株式會社',
+            'Activision Publishing(動視)',
+            'Blizzard Entertainment(暴雪娛樂)',
+            ' CD Projekt',
+            'Valve Corporation (維爾福公司)',
+            'CAPCOM(卡普空)',
+            '萬代南夢宮娛樂'
+        ];
 
-            return $randomstring;
-        }
-
+        return $characters[rand(0, count($characters) - 1)];
 
     }
 

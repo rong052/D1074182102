@@ -18,8 +18,6 @@ Route::get('/',function (){
     return view('welcome');
 });
 
-Route::get('games',[gamescontroller::class, 'index']);
-
 //檢視所有公司資料
 Route::get('companys',[companyscontroller::class, 'index']);
 
@@ -35,7 +33,7 @@ Route::get('companys/{id}/edit', [companyscontroller::class, 'edit'])->where('id
 
 
 //檢視所有遊戲資料
-Route::get('games', [gamescontroller::class, 'index']);
+Route::get('games', [gamescontroller::class, 'index'])->name('games.index');
 
 //新增遊戲表單
 Route::get('games/create', [gamescontroller::class, 'create']);
