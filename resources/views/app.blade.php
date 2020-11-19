@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>@yield('title')</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -21,12 +21,18 @@
     </style>
 </head>
 <body class="antialiased">
-<h1>這是預備新增遊戲的 view </h1><br/>
 
-遊戲:{{$g_name}}<br/>
-製作人:{{$g_producer}}<br/>
-公司:{{$g_company}}<br/>
+@include('header')
 
-<a href="<?php echo route('games.index'); ?>">新增遊戲</a>
+<h1>@yield('game_title')</h1>
+
+<h1>@yield('company_title')</h1>
+
+@yield('game_contents')
+
+@yield('company_contents')
+
+@include('footer')
+
 </body>
 </html>

@@ -43,6 +43,6 @@ class Companyscontroller extends Controller
 
         $companys = Company::findOrFail($id)->toArray();
 
-        return view('games.index',$companys);
+        return view('companys.show',$companys);
     }
 }

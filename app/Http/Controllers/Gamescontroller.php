@@ -84,7 +84,7 @@ class Gamescontroller extends Controller
         }
         return view('games.show')->with([ 'company'=>$game_company,'producer'=>$game_producer,'staff'=>$game_staff ]);
         */
-        return view('games.index',$games);
+        return view('games.show',$games);
 
     }
 

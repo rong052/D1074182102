@@ -22,6 +22,8 @@
 </head>
 <body class="antialiased">
 <h1>這是預備顯示[單筆]公司的 view </h1>
-<a href="companys">顯示公司</a>
+國家:{{$country}}<br/>
+
+<a href="<?php echo route('companys.index'); ?>">回到所有公司</a>
 </body>
 </html>

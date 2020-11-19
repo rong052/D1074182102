@@ -23,9 +23,9 @@
 <br class="antialiased">
 <h1>這是預備顯示[單筆]遊戲的 view </h1>
 
-公司名稱:{{$company}}<br/>
-製作人:{{$producer}}<br/>
+公司名稱:{{$g_company}}<br/>
+製作人:{{$g_producer}}<br/>
 
-<a href="game">顯示遊戲</a>
+<a href="<?php echo route('games.index'); ?>">回到所有遊戲</a>
 </body>
 </html>

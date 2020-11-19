@@ -19,15 +19,15 @@ Route::get('/',function (){
 });
 
 //檢視所有公司資料
-Route::get('companys',[companyscontroller::class, 'index']);
+Route::get('companys',[companyscontroller::class, 'index'])->name('companys.index');
 
 //新增公司表單
-Route::get('companys/create', [companyscontroller::class, 'create']);
+Route::get('companys/create', [companyscontroller::class, 'create'])->name('companys.create');
 //顯示單筆公司資料
-Route::get('companys/{id}', [companyscontroller::class, 'show'])->where('id' , '[0-9]+');
+Route::get('companys/{id}', [companyscontroller::class, 'show'])->where('id' , '[0-9]+')->name('companys.show');;
 
 //修改公司表單
-Route::get('companys/{id}/edit', [companyscontroller::class, 'edit'])->where('id' , '[0-9]+');
+Route::get('companys/{id}/edit', [companyscontroller::class, 'edit'])->where('id' , '[0-9]+')->name('companys.edit');
 
 
 
@@ -36,11 +36,11 @@ Route::get('companys/{id}/edit', [companyscontroller::class, 'edit'])->where('id
 Route::get('games', [gamescontroller::class, 'index'])->name('games.index');
 
 //新增遊戲表單
-Route::get('games/create', [gamescontroller::class, 'create']);
+Route::get('games/create', [gamescontroller::class, 'create'])->name('games.create');
 
 //顯示單筆遊戲資料
-Route::get('games/{id}', [gamescontroller::class, 'show'])->where('id' , '[0-9]+');
+Route::get('games/{id}', [gamescontroller::class, 'show'])->where('id' , '[0-9]+')->name('games.show');
 
 //修改遊戲表單
-Route::get('games/{id}/edit', [gamescontroller::class, 'edit'])->where('id' , '[0-9]+');
+Route::get('games/{id}/edit', [gamescontroller::class, 'edit'])->where('id' , '[0-9]+')->name('games.edit');
 
