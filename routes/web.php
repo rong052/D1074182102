@@ -29,6 +29,9 @@ Route::get('companys/{id}', [companyscontroller::class, 'show'])->where('id' , '
 //修改公司表單
 Route::get('companys/{id}/edit', [companyscontroller::class, 'edit'])->where('id' , '[0-9]+')->name('companys.edit');
 
+//新增資料的網域名稱
+Route::post('companys/store', [companyscontroller::class, 'store'])->name('companys.store');
+
 
 
 
@@ -43,4 +46,8 @@ Route::get('games/{id}', [gamescontroller::class, 'show'])->where('id' , '[0-9]+
 
 //修改遊戲表單
 Route::get('games/{id}/edit', [gamescontroller::class, 'edit'])->where('id' , '[0-9]+')->name('games.edit');
+
+//新增遊戲資料的網域名稱
+Route::post('games/store', [gamescontroller::class, 'store'])->name('games.store');
+
 

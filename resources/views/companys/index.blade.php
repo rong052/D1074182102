@@ -6,6 +6,7 @@
 
 @section('company_contents')
 <table>
+    <a href="{{ route('companys.create') }}">新增公司</a>
     <tr>
         <th>製作公司或工作室</th>
         <th>國家</th>

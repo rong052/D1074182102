@@ -6,6 +6,7 @@
 
 @section('game_contents')
     <table>
+        <a href="{{ route('games.create') }}">新增公司</a>
         <tr>
             <th>遊戲作品</th>
             <th>製作人</th>
