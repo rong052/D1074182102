@@ -11,14 +11,14 @@
 
         {!! Form::Label('cp_name', '製作公司:') !!}
 
-        {!! Form::Label('cp_name', null,['class'=> 'form-control']) !!}
+        {!! Form::text('cp_name', null,['class'=> 'form-control']) !!}
 
     </div>
     <div class="form-group">
 
         {!! Form::Label('country', '國家:') !!}
 
-        {!! Form::Label('country', null,['class'=> 'form-control']) !!}
+        {!! Form::text('country', null,['class'=> 'form-control']) !!}
 
     </div>
 
