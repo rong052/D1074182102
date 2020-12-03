@@ -11,8 +11,8 @@ class Game extends Model
     protected  $fillable=[
 
         'g_name',
-        'g_producer',
         'g_company',
+        'g_producer',
         'created_at',
         'updated_at'
 

@@ -15,5 +15,6 @@ class Company extends Model
         'country',
         'created_at',
         'updated_at'
+
         ];
 }

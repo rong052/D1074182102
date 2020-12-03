@@ -32,6 +32,12 @@ Route::get('companys/{id}/edit', [companyscontroller::class, 'edit'])->where('id
 //新增資料的網域名稱
 Route::post('companys/store', [companyscontroller::class, 'store'])->name('companys.store');
 
+//修改資料
+Route::patch('companys/update',[companyscontroller::class, ' update'])->name('companys.update');
+
+//刪除資料
+Route::delete('companys/delete/{id}', [companyscontroller::class, 'destroy'])->where('id' , '[0-9]+')->name('companys.destroy');
+
 
 
 
@@ -50,4 +56,9 @@ Route::get('games/{id}/edit', [gamescontroller::class, 'edit'])->where('id' , '[
 //新增遊戲資料的網域名稱
 Route::post('games/store', [gamescontroller::class, 'store'])->name('games.store');
 
+//修改資料
+Route::patch('games/update/{id}',[gamescontroller::class, 'update'])->where('id' , '[0-9]+')->name('games.update');
 
+
+//刪除資料
+Route::delete('games/delete/{id}', [gamescontroller::class, 'destroy'])->where('id' , '[0-9]+')->name('games.destroy');

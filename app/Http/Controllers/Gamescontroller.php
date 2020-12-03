@@ -5,13 +5,27 @@ namespace App\Http\Controllers;
 use App\Models\Game;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class Gamescontroller extends Controller
 {
    public function index()
 
    {
+       /*
        $games = Game::all();
+        */
+       $games = DB::table('games')                    //指定要使用的欄位(table) 為:games
+           ->join('companys','games.g_company', '=', 'companys.id')  //指定要和games合併的欄位 (table)為:companys 並games使用設定的外部建g_companys
+           ->orderBy('games.id') //companys的id 和games的id 同步
+           ->select(                                                         //指定欄位
+                'games.id',
+               'games.g_name as g_name',
+               'companys.cp_name as g_company',
+               'games.g_producer',
+               'games.created_at',
+               'games.updated_at'
+           )->get();
 
        return view('games.index',['games'=>$games]);
    }
@@ -19,9 +33,14 @@ class Gamescontroller extends Controller
     public function create()
 
     {
-        $games=Game::create(['g_name'=>'masterhunter','g_producer'=>'Ryozo','g_company'=>'12','created_at'=>Carbon::now(),'updated_at'=>Carbon::now()]);
+       /* $games=Game::create(['g_name'=>'masterhunter',
+       'g_producer'=>'Ryozo',
+       'g_company'=>'12',
+       'created_at'=>Carbon::now(),
+       'updated_at'=>Carbon::now()]);
+       */
 
-        return view('games.create',$games->toArray());
+        return view('games.create');
     }
 
     public function edit($id)
@@ -87,5 +106,38 @@ class Gamescontroller extends Controller
         return view('games.show',$games);
 
     }
+    public function store(Request $request)
+    {
+        $g_name = $request->input('g_name');
+        $g_producer = $request->input('g_producer') ;
+        $g_company = $request->input('g_company');
 
+        Game::create([
+            'g_name' =>$g_name,
+            'g_producer' =>$g_producer,
+            'g_company' => $g_company,
+            'created' => Carbon::now()
+        ]);
+
+        return redirect('games');
+    }
+    public function update($id, Request $request)
+    {
+        $games = Game::findOrFail($id);
+
+
+        $games->g_name = $request->input('g_name');
+        $games->g_producer = $request->input('g_producer') ;
+        $games->g_company = $request->input('g_company');
+        $games->save();
+
+        return redirect('games');
+    }
+
+    public function destroy($id)
+    {
+        $games = Game::findOrFail($id);
+        $games->delete();
+        return redirect('games');
+    }
 }

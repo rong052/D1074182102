@@ -21,8 +21,17 @@
   <component name="ChangeListManager">
     <list default="true" id="c2b54ee3-1725-4d6d-bd9c-aa3ebb8b249e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Companyscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Companyscontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Gamescontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Gamescontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Company.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Company.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Game.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/companys/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companys/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/companys/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companys/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/companys/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companys/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/games/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/games/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/games/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/games/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/games/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/games/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +222,8 @@
       <workItem from="1606360241861" duration="1391000" />
       <workItem from="1606367629355" duration="5000" />
       <workItem from="1606367649433" duration="427000" />
-      <workItem from="1606368958271" duration="5637000" />
+      <workItem from="1606368958271" duration="7089000" />
+      <workItem from="1606958788467" duration="18183000" />
     </task>
     <servers />
   </component>
@@ -237,18 +247,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="703" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605767765418" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605155082027">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606973728213">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605155082027" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606973728213" />
     <state x="777" y="443" key="NewPhpFileDialog" timestamp="1605767783908">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605767783908" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1605157281915">
+    <state x="793" y="221" key="RollbackChangesDialog" timestamp="1606978356597">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605157281915" />
+    <state x="793" y="221" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606978356597" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1606967527977">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606967527977" />
     <state x="123" y="57" width="1444" height="840" key="dock-window-1" timestamp="1605160091443">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

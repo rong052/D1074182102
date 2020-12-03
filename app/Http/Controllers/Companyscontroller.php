@@ -20,9 +20,14 @@ class Companyscontroller extends Controller
     public function create()
 
     {
-        $companys=Company::create(['cp_name'=>'Rockstar Games','country'=>'美國','created_at'=>Carbon::now(),'updated_at'=>Carbon::now()]);
+        /*
+        $companys=Company::create(['cp_name'=>'Rockstar Games',
+            'country'=>'美國',
+            'created_at'=>Carbon::now(),
+            'updated_at'=>Carbon::now()]);
+        */
 
-        return view('companys.create',$companys->toArray());
+        return view('companys.create');
     }
 
     public function edit($id)
@@ -44,5 +49,35 @@ class Companyscontroller extends Controller
         $companys = Company::findOrFail($id)->toArray();
 
         return view('companys.show',$companys);
+    }
+
+    public function store(Request $request)
+    {
+        $cp_name = $request->input('cp_name');
+        $country = $request->input('country');
+        Company::create([
+            'cp_name' => $cp_name,
+            'country' => $country,
+            'created' => Carbon::now()
+        ]);
+
+        return redirect('companys');
+    }
+    public function  update($id, Request $request)
+    {
+        $company = Company::findOrFail($id);
+
+        $company->cp_name = $request->input('cp_name');
+        $company->country = $request->input('country');
+        $company->save();
+        return "更新一間遊戲公司";
+
+    }
+
+    public function destroy($id)
+    {
+        $company = Company::findOrFail($id);
+        $company->delete();
+        return redirect('companys');
     }
 }
