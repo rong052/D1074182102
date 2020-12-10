@@ -22,7 +22,7 @@
 </head>
 <br class="antialiased">
 <h1>這是預備顯示[單筆]遊戲的 view </h1>
-
+遊戲作品:{{$g_name}}<br/>
 公司名稱:{{$g_company}}<br/>
 製作人:{{$g_producer}}<br/>
 

@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Company;
 use App\Models\Game;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class Gamescontroller extends Controller
+class GamesController extends Controller
 {
    public function index()
 
@@ -46,12 +47,9 @@ class Gamescontroller extends Controller
     public function edit($id)
 
     {
-        $games=Game::findOrFail($id);
-        $games->update(['g_name'=>'League of Legends']);
-        $games->save();
-        $games->toArray();
+        $games = Game::findOrFail($id);
 
-        return view('games.edit', $games);
+        return view('games.edit',['game'=>$games]);
 
 
         /*$gema = games::find($id);
@@ -86,8 +84,8 @@ class Gamescontroller extends Controller
 
     {
 
-        $games = Game::findOrFail($id)->toArray();
-
+        $game = Game::findOrFail($id);
+        $company =Company::findOrFail($game->g_company);
         /*
         if($id == 5)
         {
@@ -103,7 +101,7 @@ class Gamescontroller extends Controller
         }
         return view('games.show')->with([ 'company'=>$game_company,'producer'=>$game_producer,'staff'=>$game_staff ]);
         */
-        return view('games.show',$games);
+        return view('games.show',['g_name' => $game->g_name, 'g_company' => $company->cp_name,'g_producer' => $game->g_producer]);
 
     }
     public function store(Request $request)
@@ -121,10 +119,9 @@ class Gamescontroller extends Controller
 
         return redirect('games');
     }
-    public function update($id, Request $request)
+    public function update(Request $request, $id)
     {
         $games = Game::findOrFail($id);
-
 
         $games->g_name = $request->input('g_name');
         $games->g_producer = $request->input('g_producer') ;

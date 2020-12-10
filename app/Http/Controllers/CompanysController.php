@@ -6,7 +6,7 @@ use App\Models\Company;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-class Companyscontroller extends Controller
+class CompanysController extends Controller
 {
     public function index()
 
@@ -33,12 +33,9 @@ class Companyscontroller extends Controller
     public function edit($id)
 
     {
-        $companys=Company::findOrFail($id);
-        $companys->update(['cp_name'=>'Ubisoft']);
-        $companys->save();
-        $companys->toArray();
+        $company=Company::findOrFail($id);
 
-        return view('companys.edit', $companys);
+        return view('companys.edit', ['company'=>$company]);
 
     }
 
@@ -46,9 +43,9 @@ class Companyscontroller extends Controller
 
     {
 
-        $companys = Company::findOrFail($id)->toArray();
+        $companys = Company::findOrFail($id);
 
-        return view('companys.show',$companys);
+        return view('companys.show',['cp_name'=>$companys->cp_name,'country'=>$companys->country]);
     }
 
     public function store(Request $request)
@@ -63,14 +60,14 @@ class Companyscontroller extends Controller
 
         return redirect('companys');
     }
-    public function  update($id, Request $request)
+    public function update(Request $request, $id)
     {
         $company = Company::findOrFail($id);
 
         $company->cp_name = $request->input('cp_name');
         $company->country = $request->input('country');
         $company->save();
-        return "更新一間遊戲公司";
+        return redirect('companys');
 
     }
 
