@@ -5,6 +5,7 @@
 @section('game_title','建立遊戲公司表單')
 
 @section('game_contents')
+    @include('message.glist')
 
     {!! Form::open(['url' => 'games/store']) !!}
 

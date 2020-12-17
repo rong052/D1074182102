@@ -6,7 +6,17 @@
 
 @section('game_contents')
     <table>
-        <a href="{{ route('games.create') }}">新增遊戲</a>
+        <a href="{{ route('games.create') }}"> 新增遊戲 </a>
+        <tr>
+            <th>
+                <form action="{{url('games/company')}}" method='post'>
+                    {!! Form::label('g_company', '指定公司：') !!}
+                    {!!Form::select('g_company', $companys, ['class'=>'form-control']) !!}
+                    <input class="btn btn-default" type="submit" value="查詢"/>
+                    @csrf
+                </form>
+            </th>
+        </tr>
         <tr>
             <th>遊戲作品</th>
             <th>製作公司</th>

@@ -21,8 +21,15 @@ Route::get('/',function (){
 //檢視所有公司資料
 Route::get('companys',[CompanysController::class, 'index'])->name('companys.index');
 
+//選定相同國家的公司
+Route::post('companys/country', [CompanysController::class, 'country'])->name('companys.country');
+
+//公司查詢
+Route::get('companys/senior', [CompanysController::class, 'senior'])->name('companys.senior');
+
 //新增公司表單
 Route::get('companys/create', [CompanysController::class, 'create'])->name('companys.create');
+
 //顯示單筆公司資料
 Route::get('companys/{id}', [CompanysController::class, 'show'])->where('id' , '[0-9]+')->name('companys.show');;
 
@@ -40,9 +47,14 @@ Route::delete('companys/delete/{id}', [CompanysController::class, 'destroy'])->w
 
 
 
-
 //檢視所有遊戲資料
 Route::get('games', [GamesController::class, 'index'])->name('games.index');
+
+//遊戲作品查詢
+Route::get('games/senior', [GamesController::class, 'senior'])->name('games.senior');
+
+//選定相同公司的遊戲作品
+Route::post('games/company', [GamesController::class, 'company'])->name('games.company');
 
 //新增遊戲表單
 Route::get('games/create', [GamesController::class, 'create'])->name('games.create');

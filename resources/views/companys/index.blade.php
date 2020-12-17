@@ -8,6 +8,16 @@
 <table>
     <a href="{{ route('companys.create') }}">新增公司</a>
     <tr>
+        <th>
+            <form action="{{url('companys/country')}}" method='post'>
+                {!! Form::label('country', '指定國家：') !!}
+                {!!Form::select('country', $companys,['class'=>'form-control'])!!}
+                <input class="btn btn-default" type="submit" value="查詢"/>
+                @csrf
+            </form>
+        </th>
+    </tr>
+    <tr>
         <th>製作公司或工作室</th>
         <th>國家</th>
         <th>建立時間</th>

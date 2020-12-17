@@ -5,7 +5,7 @@
 @section('game_title','修改遊戲作品表單')
 
 @section('game_contents')
-
+    @include('message.glist')
     {!! Form::model($game,['method'=>'patch', 'action' => ['\App\Http\Controllers\GamesController@update', $game->id]]) !!}
 
     @include('games.form',['gamesbutton'=>"更新遊戲作品資料"])

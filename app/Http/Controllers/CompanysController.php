@@ -11,10 +11,21 @@ class CompanysController extends Controller
     public function index()
 
     {
-        $companys = Company::all();
+        $companys = Company::allCompanys()->get();
 
         return view('companys.index',['companys'=>$companys]);
 
+    }
+
+    public function country()
+    {
+        $companys = Company::allCompanys()->get();
+        $data["$company->id"] = $company->country;
+        foreach ($companys as $company)
+        {
+            $data["$company->id"] = $company->country;
+        }
+        return view('companys.index',['companys'=>$data]);
     }
 
     public function create()

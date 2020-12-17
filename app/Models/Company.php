@@ -17,4 +17,12 @@ class Company extends Model
         'updated_at'
 
         ];
+
+    public function scopeAllCompanys($query)
+    {
+        $query->orderBy('id') //companys的id 和games的id 同步
+        ->select(                                                         //指定欄位
+        'id',
+        'cp_name');
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateArticleRequest;
 use App\Models\Company;
 use App\Models\Game;
 use Carbon\Carbon;
@@ -11,25 +12,42 @@ use Illuminate\Support\Facades\DB;
 class GamesController extends Controller
 {
    public function index()
-
    {
-       /*
-       $games = Game::all();
-        */
-       $games = DB::table('games')                    //指定要使用的欄位(table) 為:games
-           ->join('companys','games.g_company', '=', 'companys.id')  //指定要和games合併的欄位 (table)為:companys 並games使用設定的外部建g_companys
-           ->orderBy('games.id') //companys的id 和games的id 同步
-           ->select(                                                         //指定欄位
-                'games.id',
-               'games.g_name as g_name',
-               'companys.cp_name as g_company',
-               'games.g_producer',
-               'games.created_at',
-               'games.updated_at'
-           )->get();
 
-       return view('games.index',['games'=>$games]);
+       $games = Game::allGames()->get();
+       $companys = Company::allCompanys()->get();
+       $data = [];
+       foreach ($companys as $company)
+       {
+           $data["$company->id"] = $company->cp_name;
+       }
+
+       return view('games.index',['games'=>$games, 'companys'=>$data]);
    }
+
+    public function senior()
+    {
+        $games = Game::scopesenior()->get();
+        $companys = Game::allcompanys()->get();
+        $data =[];
+        foreach ($companys as $company)
+        {
+            $data["$company->$company"] = $company->company;
+        }
+
+        return view('games.index',['game'=>$games, 'position'=>$data]);
+   }
+    public function company(Request $request)
+    {
+        $games = Game::allGamesByCompany($request->input('g_company'))->get();
+        $companys = Company::allCompanys()->get();
+        $data = [];
+        foreach ($companys as $company)
+        {
+            $data["$company->id"] = $company->cp_name;
+        }
+        return view('games.index',['games'=>$games, 'companys'=>$data]);
+    }
 
     public function create()
 
@@ -104,7 +122,7 @@ class GamesController extends Controller
         return view('games.show',['g_name' => $game->g_name, 'g_company' => $company->cp_name,'g_producer' => $game->g_producer]);
 
     }
-    public function store(Request $request)
+    public function store(CreateArticleRequest $request)
     {
         $g_name = $request->input('g_name');
         $g_producer = $request->input('g_producer') ;
@@ -119,7 +137,7 @@ class GamesController extends Controller
 
         return redirect('games');
     }
-    public function update(Request $request, $id)
+    public function update(CreateArticleRequest $request, $id)
     {
         $games = Game::findOrFail($id);
 
