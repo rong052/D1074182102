@@ -43,4 +43,8 @@ class Game extends Model
                 'games.created_at',
                 'games.updated_at');
     }
+    public  function companys()
+    {
+        return  $this->belongsTo('App\Models\Companys','g_company','id');
+    }
 }

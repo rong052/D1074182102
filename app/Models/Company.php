@@ -45,6 +45,9 @@ class Company extends Model
     {
         $query->orderBy('country')
         ->select('country')->groupBy('country');
-
+    }
+    public function games()
+    {
+        return $this->hasMany('App\Models\Game','g_company');
     }
 }

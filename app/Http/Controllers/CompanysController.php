@@ -65,8 +65,9 @@ class CompanysController extends Controller
     {
 
         $companys = Company::findOrFail($id);
-
-        return view('companys.show',['cp_name'=>$companys->cp_name,'country'=>$companys->country]);
+        $games = $companys->games;
+        return view('companys.show',['companys'=>$companys,'games'=>$games]);
+        /*return view('companys.show',['cp_name'=>$companys->cp_name,'country'=>$companys->country]);*/
     }
 
     public function store(Request $request)
