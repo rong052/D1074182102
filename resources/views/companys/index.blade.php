@@ -10,8 +10,8 @@
     <tr>
         <th>
             <form action="{{url('companys/country')}}" method='post'>
-                {!! Form::label('country', '指定國家：') !!}
-                {!!Form::select('country', $companys,['class'=>'form-control'])!!}
+                {!!Form::label('country', '指定國家：') !!}
+                {!!Form::select('country', $countries,['class'=>'form-control'])!!}
                 <input class="btn btn-default" type="submit" value="查詢"/>
                 @csrf
             </form>

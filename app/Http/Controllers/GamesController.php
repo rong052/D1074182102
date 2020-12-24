@@ -13,7 +13,6 @@ class GamesController extends Controller
 {
    public function index()
    {
-
        $games = Game::allGames()->get();
        $companys = Company::allCompanys()->get();
        $data = [];
@@ -24,7 +23,6 @@ class GamesController extends Controller
 
        return view('games.index',['games'=>$games, 'companys'=>$data]);
    }
-
     public function senior()
     {
         $games = Game::scopesenior()->get();

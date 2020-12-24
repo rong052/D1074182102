@@ -24,8 +24,8 @@ class Game extends Model
         ->orderBy('games.id') //companys的id 和games的id 同步
         ->select(                                                         //指定欄位
             'games.id',
-                'games.g_name as g_name',
-                'companys.cp_name as g_company',
+            'games.g_name as g_name',
+            'companys.cp_name as g_company',
             'games.g_producer',
             'games.created_at',
             'games.updated_at');

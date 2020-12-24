@@ -20,17 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2b54ee3-1725-4d6d-bd9c-aa3ebb8b249e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/message/glist.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/companys/country.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompanysController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompanysController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GamesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GamesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Company.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Company.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Game.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/companys/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companys/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/games/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/games/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/games/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/games/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/games/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/games/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,6 +223,7 @@
       <workItem from="1607568730781" duration="5414000" />
       <workItem from="1607575008759" duration="11792000" />
       <workItem from="1608180992674" duration="16241000" />
+      <workItem from="1608772671545" duration="14133000" />
     </task>
     <servers />
   </component>
@@ -258,10 +255,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="423" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607579960041" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608188670919">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608780866481">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608188670919" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608780866481" />
     <state x="174" y="86" key="DiffContextDialog" timestamp="1608196763530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -294,14 +291,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="663" y="118" width="778" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607579182341" />
-    <state x="674" y="290" key="refactoring.ChangeSignatureDialog" timestamp="1605155015967">
+    <state x="674" y="290" key="refactoring.ChangeSignatureDialog" timestamp="1608779305452">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="674" y="290" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605155015967" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1608196759283">
+    <state x="674" y="290" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608779305452" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1608779770712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608196759283" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608779770712" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1608190232538">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

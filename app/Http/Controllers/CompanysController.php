@@ -9,27 +9,37 @@ use Illuminate\Http\Request;
 class CompanysController extends Controller
 {
     public function index()
-
     {
         $companys = Company::allCompanys()->get();
-
-        return view('companys.index',['companys'=>$companys]);
+        $countries = Company::allCountries()->get();
+        $data = [];
+        foreach ($countries as $country)
+        {
+            $data["$country->country"] = $country->country;
+        }
+        return view('companys.index',['companys'=>$companys, 'countries'=>$data]);
 
     }
-
-    public function country()
+    public function senior(Request $request)
     {
-        $companys = Company::allCompanys()->get();
-        $data["$company->id"] = $company->country;
-        foreach ($companys as $company)
+        $company = Company::Companys($request)->get();
+        return view('companys.index',['companys'=>$company]);
+    }
+
+    public function country(Request $request)
+    {
+        $country = $request->input('country');
+        $companys = Company::allCompanysByCountry($country)->get();
+        $countries = Company::allCountries()->get();
+        $data = [];
+        foreach ($countries as $country)
         {
-            $data["$company->id"] = $company->country;
+            $data["$country->country"] = $country->country;
         }
-        return view('companys.index',['companys'=>$data]);
+        return view('companys.index',['companys'=>$companys,'countries'=>$data]);
     }
 
     public function create()
-
     {
         /*
         $companys=Company::create(['cp_name'=>'Rockstar Games',
