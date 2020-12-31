@@ -23,6 +23,12 @@ class GamesController extends Controller
 
        return view('games.index',['games'=>$games, 'companys'=>$data]);
    }
+
+    public function games()
+    {
+        return Game::all();
+    }
+
     public function senior()
     {
         $games = Game::scopesenior()->get();
@@ -135,6 +141,26 @@ class GamesController extends Controller
 
         return redirect('games');
     }
+
+    public function delete(Request $request)
+    {
+        $game = Game::find($request->input('id'));
+
+        if($game == null)
+        {
+            return response()->json([
+                'status'=>0,
+            ]);
+        }
+
+        if ($game ->delete())
+        {
+            return  response()->json([
+                'status'=>1,
+            ]);
+        }
+    }
+
     public function update(CreateGamesRequest $request, $id)
     {
         $games = Game::findOrFail($id);

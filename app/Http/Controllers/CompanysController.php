@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateCompanysRequest;
 use App\Models\Company;
 use Carbon\Carbon;
+use http\Env\Response;
 use Illuminate\Http\Request;
 
 class CompanysController extends Controller
@@ -20,6 +21,11 @@ class CompanysController extends Controller
         }
         return view('companys.index',['companys'=>$companys, 'countries'=>$data]);
 
+    }
+
+    public function companys()
+    {
+        return Company::all();
     }
     public function senior(Request $request)
     {
@@ -94,7 +100,24 @@ class CompanysController extends Controller
         return redirect('companys');
 
     }
+    public function delete(Request $request)
+    {
+        $company = Company::find($request->input('id'));
 
+        if($company == null)
+        {
+            return response()->json([
+                'status'=>0,
+            ]);
+        }
+
+        if ($company ->delete())
+        {
+            return  response()->json([
+                'status'=>1,
+            ]);
+        }
+    }
     public function destroy($id)
     {
         $company = Company::findOrFail($id);
