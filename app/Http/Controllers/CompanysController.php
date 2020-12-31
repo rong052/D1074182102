@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateCompanysRequest;
 use App\Models\Company;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -70,10 +71,11 @@ class CompanysController extends Controller
         /*return view('companys.show',['cp_name'=>$companys->cp_name,'country'=>$companys->country]);*/
     }
 
-    public function store(Request $request)
+    public function store(CreateCompanysRequest $request)
     {
         $cp_name = $request->input('cp_name');
         $country = $request->input('country');
+
         Company::create([
             'cp_name' => $cp_name,
             'country' => $country,
@@ -82,7 +84,7 @@ class CompanysController extends Controller
 
         return redirect('companys');
     }
-    public function update(Request $request, $id)
+    public function update(CreateCompanysRequest $request, $id)
     {
         $company = Company::findOrFail($id);
 

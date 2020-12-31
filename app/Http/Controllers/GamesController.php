@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateArticleRequest;
+use App\Http\Requests\CreateGamesRequest;
 use App\Models\Company;
 use App\Models\Game;
 use Carbon\Carbon;
@@ -120,7 +120,7 @@ class GamesController extends Controller
         return view('games.show',['g_name' => $game->g_name, 'g_company' => $company->cp_name,'g_producer' => $game->g_producer]);
 
     }
-    public function store(CreateArticleRequest $request)
+    public function store(CreateGamesRequest $request)
     {
         $g_name = $request->input('g_name');
         $g_producer = $request->input('g_producer') ;
@@ -135,7 +135,7 @@ class GamesController extends Controller
 
         return redirect('games');
     }
-    public function update(CreateArticleRequest $request, $id)
+    public function update(CreateGamesRequest $request, $id)
     {
         $games = Game::findOrFail($id);
 

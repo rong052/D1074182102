@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateArticleRequest extends FormRequest
+class CreateCompanysRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,18 +24,16 @@ class CreateArticleRequest extends FormRequest
     public function rules()
     {
         return [
-            'g_name'=>'required|min:5',
-            'g_company'=>'required',
-            'g_producer'=>'required'
+            'cp_name'=>'required|min:5',
+            'country'=>'required'
         ];
     }
+
    public function messages()
     {
         return [
-            'g_name.required' => "遊戲名稱為必填",
-            'g_company.required' => "公司名稱為必填",
-            "g_producer.required" => "製作人為必填",
-
+            'cp_name.required' => "製作公司名稱為必填",
+            'country.required' => "國家名稱為必填",
         ];
     }
 }

@@ -13,6 +13,7 @@
 
     {!! Form::close() !!}
 @endsection
+
 {{--<div class="form-group">
 {!! Form::Label('g_name', '遊戲作品:') !!}
 
