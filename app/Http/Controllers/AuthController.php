@@ -6,23 +6,27 @@ use App\Models\User;
 use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
     //
     public function register(Request $request)
     {
-        $this->validate($request, [
-            'g_name' => ['required', 'string'],
-            'email' => ['required', 'email'],
-            'password' => ['required','string'],
-        ]);
+        try {
+            $this->validate($request, [
+                'g_name' => ['required', 'string'],
+                'email' => ['required', 'email'],
+                'password' => ['required', 'string'],
+            ]);
+        } catch (ValidationException $e) {
+        }
 
         $user = User::query()
             ->firstOrCreate([
                 'email' => $request->get('email'),
                 ],[
-                    'name'=>$request->get('name'),
+                    'g_name'=>$request->get('g_name'),
                     'password' => Hash::make($request->get('password')),
             ]);
         if (!$user->wasRecentlyCreated) {
@@ -47,10 +51,11 @@ class AuthController extends Controller
     }
     public function  login(Request $request)
     {
-        $this->validtae($request,[
+        $this->validate($request,[
             'email'=>['required','email'],
             'password' => ['required','string'],
         ]);
+
 
         $user = User::query()
             ->where('email','=',$request->get('email'))
@@ -66,5 +71,14 @@ class AuthController extends Controller
                     ],
                 ]);
         }
+        $token = $user->createToken('email');
+
+        return Response()
+            ->json([
+                'status' => 1,
+                'data' => [
+                    'token' => $token->plainTextToken,
+                ],
+            ]);
     }
 }

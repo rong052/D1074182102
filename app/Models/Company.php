@@ -50,4 +50,10 @@ class Company extends Model
     {
         return $this->hasMany('App\Models\Game','g_company');
     }
+
+    public function delete()
+    {
+        $this->games()->delete();
+        return parent::delete();
+    }
 }

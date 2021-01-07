@@ -21,12 +21,16 @@ Route::post('login',[AuthController::class, 'login']);
 Route::group(['middleware' => 'auth:sanctum'], function () {
     //查詢所有遊戲
     Route::get('games',[GamesController::class, 'games']);
+
     //修改指定遊戲
     Route::patch('games',[GamesController::class, 'update']);
+
     //刪除指定遊戲
     Route::delete('games', [GamesController::class,'delete']);
+
     //查詢所有遊戲
     Route::get('companys', [CompanysController::class,'companys']);
+
     //刪除指定遊戲
     Route::delete('companys', [CompanysController::class,'delete']);
 });
