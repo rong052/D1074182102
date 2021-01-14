@@ -21,9 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c2b54ee3-1725-4d6d-bd9c-aa3ebb8b249e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Company.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Company.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompanysController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompanysController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GamesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GamesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/companys/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companys/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +226,8 @@
       <workItem from="1608180992674" duration="16241000" />
       <workItem from="1608772671545" duration="21199000" />
       <workItem from="1609377955814" duration="15214000" />
-      <workItem from="1609983052234" duration="6944000" />
+      <workItem from="1609983052234" duration="7080000" />
+      <workItem from="1610590950464" duration="8260000" />
     </task>
     <servers />
   </component>
@@ -258,10 +259,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="423" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609381596640" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608780866481">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610601843647">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608780866481" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610601843647" />
     <state x="174" y="86" key="DiffContextDialog" timestamp="1608196763530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

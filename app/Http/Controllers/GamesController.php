@@ -142,6 +142,7 @@ class GamesController extends Controller
         return redirect('games');
     }
 
+
     public function delete(Request $request)
     {
         $game = Game::find($request->input('id'));
@@ -159,6 +160,24 @@ class GamesController extends Controller
                 'status'=>1,
             ]);
         }
+    }
+
+    public function api_update(Request $request)
+    {
+        $games = Game::findOrFail($request->input('id'));
+
+        $games->g_name = $request->input('g_name');
+        $games->g_producer = $request->input('g_producer') ;
+        $games->g_company = $request->input('g_company');
+        if ($games->save())
+        {
+            return  response()->json([
+                'status'=>1,
+            ]);
+        }
+        return  response()->json([
+            'status'=>0,
+        ]);
     }
 
     public function update(CreateGamesRequest $request, $id)

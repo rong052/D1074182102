@@ -90,6 +90,24 @@ class CompanysController extends Controller
 
         return redirect('companys');
     }
+
+    public function api_update(Request $request )
+    {
+        $company = Company::findOrFail($request->input('id'));
+
+        $company->cp_name = $request->input('cp_name');
+        $company->country = $request->input('country');
+        if ($company->save())
+        {
+            return  response()->json([
+                'status'=>1,
+            ]);
+        }
+        return  response()->json([
+            'status'=>0,
+        ]);
+    }
+
     public function update(CreateCompanysRequest $request, $id)
     {
         $company = Company::findOrFail($id);
